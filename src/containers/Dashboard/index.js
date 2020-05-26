@@ -148,8 +148,8 @@ const Dashboard = (props) => {
                                     <Card
                                         bordered={true}
                                         hoverable
-                                        style={{ height: 300, width: 240 }}
-                                        cover={<img alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
                                     >
                                         <Meta title="Khu vực Cầu Giấy" description=" Số 27 hẻm, 16/41 Ngõ 184 Hoa Bằng, Yên Hoà, Cầu Giấy, Hà Nội" />
                                     </Card>
@@ -158,8 +158,8 @@ const Dashboard = (props) => {
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         hoverable
-                                        style={{ height: 300, width: 240 }}
-                                        cover={<img alt="example" src="https://img.vtcnew.com.vn/files/f2/2014/03/19/ha-noi-ma-tran-cot-dien-bay-nguoi-di-duong-0.jpg" />}
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://img.vtcnew.com.vn/files/f2/2014/03/19/ha-noi-ma-tran-cot-dien-bay-nguoi-di-duong-0.jpg" />}
                                     >
                                         <Meta title="Khu vực Đống Đa" description=" Ngách 12/58 Đào Tấn, Cống Vị, Ba Đình, Hà Nội" />
                                     </Card>
@@ -168,8 +168,8 @@ const Dashboard = (props) => {
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         hoverable
-                                        style={{ height: 300, width: 240 }}
-                                        cover={<img alt="example" src="http://cafebiz.cafebizcdn.vn/thumb_w/640/2016/photo-2-1481634743125.jpg" />}
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="http://cafebiz.cafebizcdn.vn/thumb_w/640/2016/photo-2-1481634743125.jpg" />}
                                     >
                                         <Meta title="Khu vực Nam Từ Liêm" description=" Hố Trần Hữu Dực, Mỹ Đình 1, Nam Từ Liêm, Hà Nội " />
                                     </Card>
@@ -178,8 +178,8 @@ const Dashboard = (props) => {
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
-                                        style={{ height: 300, width: 240 }}
-                                        cover={<img alt="example" src="https://icdn.dantri.com.vn/OlRTd1upOguwZHvZpzsc/Image/2013/02/tru-dien-31839.jpg" />}
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://icdn.dantri.com.vn/OlRTd1upOguwZHvZpzsc/Image/2013/02/tru-dien-31839.jpg" />}
                                     >
                                         <Meta title="Khu vực Bắc Từ Liêm" description=" Số 27 hẻm, 16/41 Ngõ 184 Hoa Bằng, Yên Hoà, Cầu Giấy, Hà Nội" />
                                     </Card>
@@ -191,8 +191,8 @@ const Dashboard = (props) => {
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
-                                        style={{ height: 300, width: 240 }}
-                                        cover={<img alt="example" src="http://cafebiz.cafebizcdn.vn/thumb_w/640/2016/photo-2-1481634743125.jpg" />}
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="http://cafebiz.cafebizcdn.vn/thumb_w/640/2016/photo-2-1481634743125.jpg" />}
                                     >
                                         <Meta title="Khu vực Cầu Diễn" description=" Số 27 hẻm, 16/41 Ngõ 184 Hoa Bằng, Yên Hoà, Cầu Giấy, Hà Nội" />
                                     </Card>
@@ -201,8 +201,8 @@ const Dashboard = (props) => {
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
-                                        style={{ height: 300, width: 240 }}
-                                        cover={<img alt="example" src="https://photo-2-baomoi.zadn.vn/2019_05_23_19_30822052/6b0ec677d13738696126.jpg" />}
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://photo-2-baomoi.zadn.vn/2019_05_23_19_30822052/6b0ec677d13738696126.jpg" />}
                                     >
                                         <Meta title="Khu vực Thanh Xuân" description=" Số 27 hẻm, 16/41 Ngõ 184 Hoa Bằng, Yên Hoà, Cầu Giấy, Hà Nội" />
                                     </Card>
@@ -211,8 +211,8 @@ const Dashboard = (props) => {
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
-                                        style={{ height: 300, width: 240 }}
-                                        cover={<img alt="example" src="https://media1.nguoiduatin.vn/media/hoang-van-viet/2019/09/02/xe-tai-lui-tong-do-nhieu-cot-dien-nguoi-dan-chiu-canh-khong-co-dien-trong-ngay-nghi-le.jpg" />}
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media1.nguoiduatin.vn/media/hoang-van-viet/2019/09/02/xe-tai-lui-tong-do-nhieu-cot-dien-nguoi-dan-chiu-canh-khong-co-dien-trong-ngay-nghi-le.jpg" />}
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description=" Số 27 hẻm, 16/41 Ngõ 184 Hoa Bằng, Yên Hoà, Cầu Giấy, Hà Nội" />
                                     </Card>
@@ -233,4 +233,4 @@ const Dashboard = (props) => {
 
 }
 
-export default Dashboard; 
+export default Dashboard;
