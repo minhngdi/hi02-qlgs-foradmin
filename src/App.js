@@ -2,9 +2,11 @@ import React from 'react';
 import {Layout, Button} from 'antd';
 import './App.css';
 
+import CreateWarning from './Warning/CreateWarning'
 const {Header} = Layout;
 
 function App() {
+  
   return (
     <div className="App">
         <Layout>
@@ -15,6 +17,7 @@ function App() {
         <Button>
           Button Test
         </Button>
+      <CreateWarning />
     </div>
   );
 }
