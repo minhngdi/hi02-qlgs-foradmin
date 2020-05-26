@@ -1,0 +1,28 @@
+.title {
+    background-color: aliceblue;
+    text-align: left;
+    color: darkblue;
+    height: 40px;
+    padding-bottom: 10px;
+}
+
+.top-card-wrapper {
+    background: #ececec;
+    padding: 30px;
+    padding-bottom: 20px;
+}
+
+.site-card-wrapper {
+    background: #ececec;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.body-mod {
+    padding-top: 20px;
+}
+
+.location-alert-grid {
+    margin-top: 10px;
+}
+
