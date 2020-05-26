@@ -1,0 +1,7 @@
+.inline{
+	display: flex;
+}
+
+.inline >*{
+	display: flex;
+}
