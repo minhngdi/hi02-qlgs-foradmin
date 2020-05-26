@@ -1,6 +1,6 @@
 import React from 'react';
-import {Layout, Button} from 'antd';
 import './App.css';
+import Dashboard from './containers/Dashboard';
 
 import CreateWarning from './Warning/CreateWarning'
 const {Header} = Layout;
@@ -18,6 +18,9 @@ function App() {
           Button Test
         </Button>
       <CreateWarning />
+=======
+      <Dashboard />
+>>>>>>> 03ff6c8fc072cb8598fa3a6accc1eead8d3cd504
     </div>
   );
 }
