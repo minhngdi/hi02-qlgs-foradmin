@@ -2,9 +2,11 @@ import React from 'react';
 import './style.css';
 import PageHeader from '../../components/PageHeader';
 import Sidebar from '../../components/Sidebar';
+import PieChart from '../../components/PieChart';
+import ColChart from '../../components/ColChart';
 import { Layout, Card, Col, Row, Select, Alert } from 'antd';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 const { Option } = Select;
 const { Meta } = Card;
 
@@ -12,6 +14,8 @@ const gridStyle = {
     width: '100%',
     textAlign: 'center',
 };
+
+const data = ['a','b'];
 
 
 function onChange(value) {
@@ -107,23 +111,34 @@ const Dashboard = (props) => {
                             <Row gutter={16}>
                                 <Col span={8}>
                                     <Card style={{ background: '#95de64' }} title="Đang triển khai" bordered={false}>
-                                        <h1>50</h1>Dự án
+                                        <h1>50</h1>đợt kiểm tra
                                     </Card>
                                 </Col>
                                 <Col span={8}>
                                     <Card style={{ background: '#fff566' }} title="Chờ đội đảm nhận" bordered={false}>
                                         <h1>10</h1>
-                                        Dự án
+                                        đợt kiểm tra
                                     </Card>
                                 </Col>
                                 <Col span={8}>
                                     <Card style={{ background: '#ff9c6e' }} title="Quá hạn" bordered={false}>
                                         <h1>3</h1>
-                                        Dự án
+                                        đợt kiểm tra
                                     </Card>
                                 </Col>
                             </Row>
                         </div>
+
+                        {/* Chart-Card */}
+                        
+                        <Row gutter={[8, 16]}>
+                            <Col span={12} >
+                                <PieChart />
+                            </Col>
+                            <Col span={12} >
+                                <ColChart />
+                            </Col>
+                        </Row>
 
                         {/* Location-Card */}
                         <div className="site-card-wrapper">
