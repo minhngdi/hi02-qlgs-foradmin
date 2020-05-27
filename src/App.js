@@ -3,6 +3,7 @@ import './App.css';
 import Dashboard from './containers/Dashboard';
 import Inspection from "./containers/Inspection";
 
+import CreateWarning from './containers/Warning/CreateWarning'
 
 function App() {
   return (
@@ -13,5 +14,6 @@ function App() {
     </div>
   );
 }
+      // <Dashboard />
 
 export default App;
