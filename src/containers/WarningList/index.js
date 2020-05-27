@@ -2,13 +2,12 @@ import React from 'react';
 import './style.css';
 import PageHeader from '../../components/PageHeader';
 import Sidebar from '../../components/Sidebar';
-import { Layout, Card, Col, Row, Select, Alert, Table, Switch,  Radio, Form, Breadcrumb, Tag, Input } from 'antd';
+import { Layout, Card, Col, Row, Select, Alert, Table, Switch,  Radio, Form, Breadcrumb, Tag } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
 const { Header, Footer, Sider, Content } = Layout;
 const { Option } = Select;
 const { Meta } = Card;
-const { Search } = Input;
 
 const gridStyle = {
     width: '100%',
@@ -284,7 +283,7 @@ function onSearch(val) {
     console.log('search:', val);
 }
 
-class Inspection extends React.Component {
+class WarningList extends React.Component {
     state = {
         bordered: true,
         loading: false,
@@ -298,8 +297,8 @@ class Inspection extends React.Component {
         scroll: 'scroll',
         hasData: true,
         tableLayout: undefined,
-        top: 'none',
-        bottom: 'bottomRight',
+        top: 'topRight',
+        bottom: 'none',
     };
 
     handleToggle = prop => enable => {
@@ -385,15 +384,15 @@ class Inspection extends React.Component {
                         <Breadcrumb style={{}}>
                             <Breadcrumb.Item>Home</Breadcrumb.Item>
                             <Breadcrumb.Item>Manage Monitoring</Breadcrumb.Item>
-                            <Breadcrumb.Item>Inspection</Breadcrumb.Item>
+                            <Breadcrumb.Item>Warning</Breadcrumb.Item>
                         </Breadcrumb>
                         <Content className="body-mod">
                         {/* Filter */}
-                        <p>Lọc theo trạng thái &nbsp; &nbsp;
+                        <p>Lọc theo dự án &nbsp; &nbsp;
                             <Select
                                 showSearch
                                 style={{ width: 200 }}
-                                placeholder="Chọn trạng thái"
+                                placeholder="Chọn loại dự án"
                                 optionFilterProp="children"
                                 onChange={onChange}
                                 onFocus={onFocus}
@@ -403,29 +402,9 @@ class Inspection extends React.Component {
                                     option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                                 }
                             >
-                                <Option value="suachua">Đang triển khai</Option>
-                                <Option value="baotri">Chậm tiến độ</Option>
-                                <Option value="kiemtra">Quá hạn</Option>
-                                <Option value="waiting">Chờ đội đảm nhận</Option>
-                            </Select>
-                            &nbsp; Theo độ ưu tiên &nbsp; &nbsp;
-                            <Select
-                                showSearch
-                                style={{ width: 200 }}
-                                placeholder="Chọn độ ưu tiên"
-                                optionFilterProp="children"
-                                onChange={onChange}
-                                onFocus={onFocus}
-                                onBlur={onBlur}
-                                onSearch={onSearch}
-                                filterOption={(input, option) =>
-                                    option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                                }
-                            >
-                                <Option value="critical">Critical</Option>
-                                <Option value="high">High</Option>
-                                <Option value="normal">Normal</Option>
-                                <Option value="low">Low</Option>
+                                <Option value="suachua">Sửa chữa</Option>
+                                <Option value="baotri">Bảo trì</Option>
+                                <Option value="kiemtra">Kiếm tra</Option>
                             </Select>
                             &nbsp; theo đội đảm nhận &nbsp; &nbsp;
                             <Select
@@ -445,15 +424,27 @@ class Inspection extends React.Component {
                                 <Option value="doi2">Đội 2</Option>
                                 <Option value="doi3">Đội 3</Option>
                             </Select>
+                            &nbsp; theo người quản lý &nbsp; &nbsp;
+                            <Select
+                                showSearch
+                                style={{ width: 200 }}
+                                placeholder="Chọn tên"
+                                optionFilterProp="children"
+                                onChange={onChange}
+                                onFocus={onFocus}
+                                onBlur={onBlur}
+                                onSearch={onSearch}
+                                filterOption={(input, option) =>
+                                    option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                                }
+                            >
+                                <Option value="vana">Nguyễn Vân Á</Option>
+                                <Option value="tritue">Trần Trí Tuệ</Option>
+                                <Option value="nhannghia">Trọng Nhân Nghĩa</Option>
+                            </Select>
                         </p>
-                            <br />
-                            <Search
-                                placeholder="Nhập tên khu vực, tên đội,..."
-                                onSearch={value => console.log(value)}
-                                style={{ width: 400, marginBottom: 20, float: 'right', position: 'relative', zIndex: 99}}
-                                enterButton
-                            />
-                            <div>
+
+                        <div>
                             {/*<Form*/}
                             {/*    layout="inline"*/}
                             {/*    className="components-table-demo-control-bar"*/}
@@ -557,4 +548,4 @@ class Inspection extends React.Component {
     }
 }
 
-export default Inspection;
+export default WarningList;
