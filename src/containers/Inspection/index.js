@@ -18,45 +18,78 @@ const columns = [
     {
         title: 'Area',
         dataIndex: 'area',
-        sorter: true,
+        // onFilter: (value, record) => record.area.indexOf(value) === 0,
+        sorter: (a, b) => a.area.length - b.area.length,
+        sortDirections: ['descend','ascend'],
     },
     {
         title: 'Team',
         dataIndex: 'team',
-        sorter: true,
+        // sorter: (a, b) => a.team.length - b.team.length,
+        // sortDirections: ['descend','ascend'],
+        filters: [
+            {
+                text: 'Team 1',
+                value: 'Team 1',
+            },
+            {
+                text: 'Team 2',
+                value: 'Team 2',
+            },
+            {
+                text: 'Team 3',
+                value: 'Team 3',
+            },
+            {
+                text: 'Team 5',
+                value: 'Team 5',
+            },
+            {
+                text: 'Team 7',
+                value: 'Team 7',
+            },
+        ],
+        onFilter: (value, record) => record.team.indexOf(value) === 0,
     },
     {
         title: 'Creator',
         dataIndex: 'creator',
-        sorter: true,
+        sorter: (a, b) => a.creator.length - b.creator.length,
+        sortDirections: ['descend','ascend'],
     },
     {
         title: 'Created at',
         dataIndex: 'createdAt',
-        sorter: true,
+        // sorter: (a, b) => a.createdAt.length - b.createdAt.length,
+        // sortDirections: ['descend'],
     },
     {
         title: 'Priority',
         dataIndex: 'priority',
-        sorter: true,
         filters: [
             {
-                priority: 'critical',
+                text: 'Critical',
+                value: 'critical',
             },
             {
+                text: 'High',
                 value: 'high',
             },
             {
+                text: 'Normal',
                 value: 'normal',
             },
             {
+                text: 'Low',
                 value: 'low',
             },
         ],
-        // onFilter: (value, record) => record.address.indexOf(value) === 0,
+        onFilter: (value, record) => record.priority.indexOf(value) === 0,
+        sorter: (a, b) => a.priority.length - b.priority.length,
+        sortDirections: ['descend','ascend'],
+        defaultSortOrder: 'descend',
         render: priority => {
             let color = '';
-            console.log(priority, priority === 'critical');
             if (priority === 'critical') {
                 color = '#f50';
             }
@@ -77,18 +110,62 @@ const columns = [
         },
     },
     {
+        title: 'Status',
+        dataIndex: 'status',
+        filters: [
+            {
+                text: 'Đang triển khai',
+                value: 'on progress',
+            },
+            {
+                text: 'Chậm tiến độ',
+                value: 'Chậm tiến độ',
+            },
+            {
+                text: 'Quá hạn',
+                value: 'Quá hạn',
+            },
+            {
+                text: 'Chờ đội đảm nhận',
+                value: 'Chờ đội đảm nhận',
+            },
+        ],
+        onFilter: (value, record) => record.status.indexOf(value) === 0,
+        sorter: (a, b) => a.status.length - b.status.length,
+        sortDirections: ['descend','ascend'],
+        render: status => {
+            let color = '';
+            if (status === 'Đang triển khai') {
+                color = '#87d068';
+            }
+            if (status === 'Chậm tiến độ') {
+                color = '#ff9800';
+            }
+            if (status === 'Quá hạn') {
+                color = '#f50';
+            }
+            if (status === 'Chờ đội đảm nhận') {
+                color = '#b0bec5';
+            }
+            if (status === 'Đã hoàn thành') {
+                color = '#2db7f5';
+            }
+
+            return (
+                <Tag color={color}>
+                    {status.toUpperCase()}
+                </Tag>
+            );
+        },
+    },
+    {
         title: 'Progress',
         dataIndex: 'progress',
-        sorter: true,
+        // sorter: true,
     },
-    // {
-    //     title: 'Age',
-    //     dataIndex: 'age',
-    //     sorter: (a, b) => a.age - b.age,
-    // },
     {
         title: 'Address',
-        sorter: true,
+        // sorter: true,
         dataIndex: 'address',
     },
     {
@@ -110,60 +187,77 @@ const data = [
         area: 'Trạm Bách Khoa',
         team: 'Team 1' ,
         creator: 'Auto',
-        createdAt: '20/10/2020',
+        createdAt: '2020-12-24 23:12:00',
         priority: 'critical',
         progress: '20%',
         address: 'Đại Cồ Việt - Hai Bà Trưng',
+        status: 'Chậm tiến độ',
     },
     {
         key: '2',
-        area: 'Trạm Bách Khoa',
-        team: 'Team 1' ,
-        creator: 'Auto',
-        createdAt: '20/10/2020',
+        area: 'Trạm Cầu Giấy',
+        team: 'Team 5' ,
+        creator: 'Trần Văn Cường',
+        createdAt: '2016-12-24 23:12:00',
         priority: 'high',
-        progress: '20%',
-        address: 'Đại Cồ Việt - Hai Bà Trưng',
+        progress: '50%',
+        address: 'Phạm Hùng - Cầu Giấy',
+        status: 'Đang triển khai',
     },
     {
         key: '3',
-        area: 'Trạm Bách Khoa',
-        team: 'Team 1' ,
-        creator: 'Auto',
-        createdAt: '20/10/2020',
+        area: 'Trạm Bắc Từ Liêm',
+        team: 'Team 7' ,
+        creator: 'Lê Văn A',
+        createdAt: '2020-10-23 13:22:00',
         priority: 'normal',
-        progress: '20%',
-        address: 'Đại Cồ Việt - Hai Bà Trưng',
+        progress: '90%',
+        address: 'Trần Phú - Bắc Từ Liêm',
+        status: 'Đang triển khai',
     },
     {
         key: '4',
-        area: 'Trạm Bách Khoa',
+        area: 'Trạm Nam Từ Liêm',
         team: 'Team 1' ,
         creator: 'Auto',
-        createdAt: '20/10/2020',
+        createdAt: '2020-04-14 20:02:00',
         priority: 'low',
-        progress: '20%',
-        address: 'Đại Cồ Việt - Hai Bà Trưng',
+        progress: '100%',
+        address: '20 Phạm Hùng - Nam Từ Liêm',
+        status: 'Đã hoàn thành',
     },
     {
         key: '5',
-        area: 'Trạm Bách Khoa',
-        team: 'Team 1' ,
+        area: 'Trạm Cầu Diễn',
+        team: 'Team 3' ,
         creator: 'Nguyen Dinh Minh',
-        createdAt: '20/10/2020',
+        createdAt: '2020-01-25 13:12:00',
         priority: 'normal',
-        progress: '20%',
-        address: 'Đại Cồ Việt - Hai Bà Trưng',
+        progress: '30%',
+        address: 'Cầu Diễn',
+        status: 'Đang triển khai',
     },
     {
         key: '6',
-        area: 'Trạm Bách Khoa',
-        team: 'Team 1' ,
+        area: 'Trạm Thanh Xuân',
+        team: 'Team 2' ,
         creator: 'Auto',
-        createdAt: '20/10/2020',
+        createdAt: '2020-02-10 10:12:00',
         priority: 'low',
         progress: '20%',
-        address: 'Đại Cồ Việt - Hai Bà Trưng',
+        address: 'Nguyễn Trãi - Thanh Xuân',
+        status: 'Quá hạn',
+    },
+    {
+        key: '7',
+        area: 'Trạm Hà Đông',
+        team: 'Team 1' ,
+        creator: 'Auto',
+        createdAt: '2020-02-15 16:12:00',
+        priority: 'low',
+        progress: '0%',
+        address: 'Đại Mỗ - Hà Đông',
+        status: 'Chờ đội đảm nhận',
     },
 ];
 
@@ -286,7 +380,6 @@ class Inspection extends React.Component {
                     <Sider>
                         <Sidebar />
                     </Sider>
-
                     <Layout style={{ padding: '0 24px 24px' }}>
                         <Breadcrumb style={{}}>
                             <Breadcrumb.Item>Home</Breadcrumb.Item>
