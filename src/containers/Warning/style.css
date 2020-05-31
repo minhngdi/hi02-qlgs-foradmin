@@ -5,3 +5,20 @@
 .inline >*{
 	display: flex;
 }
+
+.form-body{
+	text-align: center;
+	padding: 25px;
+	margin: 25px;
+	background-color: #ececec;
+}
+
+.sec-title {
+	font-size: 32px;
+
+}
+
+.subsec-title{
+	font-size: 24px;
+	font-style: italic;
+}

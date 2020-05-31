@@ -7,7 +7,7 @@ import { UploadOutlined } from '@ant-design/icons';
 
 import PageHeader from '../../components/PageHeader';
 import Sidebar from '../../components/Sidebar'; 
-import { Layout } from 'antd';
+import { Layout,Breadcrumb } from 'antd';
 import './style.css';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -60,17 +60,38 @@ const CreateWarning = () => {
           <Sider>
             <Sidebar />
           </Sider>
-        <Content>
+        <Layout style={{ padding: '0 24px 24px' }}>
+          <Breadcrumb style={{}}>
+              <Breadcrumb.Item>Home</Breadcrumb.Item>
+              <Breadcrumb.Item>Warning</Breadcrumb.Item>
+              <Breadcrumb.Item>Create Warning</Breadcrumb.Item>
+          </Breadcrumb>
+        <Content className="form-body">
             <Row align={'middle'} className="SecName">
               <Col span={24}>
-                <h1>Tạo đợt kiểm tra mới</h1>
+                <h1 className="sec-title">Tạo đợt kiểm tra mới</h1>
               </Col>
             </Row>
             <Form name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
               <Row gutter={24}>
-                <Divider>Những thông tin chính</Divider>
+                <Divider className="subsec-title">Những thông tin chính</Divider>
                 <Col span={16} offset={4}>
                   <Row gutter={24}>
+
+                    <Col span={16}>
+                    <Form.Item name={['warning', 'name']} label="Tên công trình kiểm tra" rules={[{ required: true }]}>
+                      <Input />
+                    </Form.Item>
+                    </Col>
+                    <Col span={8}>
+                    <Form.Item name={['user', 'age']} label="Loại kiểm tra" rules={[{ required: true }]}>
+                      <Select defaultValue="Maintenance" >
+                        <Option value="Maintenance">Bảo trì</Option>
+                        <Option value="Repair" >Sửa chữa</Option>
+                        <Option value="upgrade" >Nâng cấp</Option>
+                      </Select>           
+                    </Form.Item>
+                    </Col>
 
                     <Col span={16}>
                     <Form.Item name={['warning', 'address']} label="Địa chỉ" rules={[{ required: true }]}>
@@ -97,11 +118,11 @@ const CreateWarning = () => {
 
                     <Col span={9}>
                     <Form.Item name={['warning', 'address']} label="Người giám sát" rules={[{ required: true }]}>
-                      <Select defaultValue="normal" >
-                        <Option value="Critical">Nhóm VP.infinite></Option>                
-                        <Option value="high">Nhóm The Boys</Option>
-                        <Option value="normal">Nhóm The Ugly</Option>
-                        <Option value="low" >Nhóm mới</Option>
+                      <Select defaultValue="1" >
+                        <Option value="1">Nhóm VP.infinite></Option>                
+                        <Option value="2">Nhóm The Boys</Option>
+                        <Option value="3">Nhóm The Ugly</Option>
+                        <Option value="4" >Nhóm mới</Option>
                       </Select>   
                     </Form.Item>
                     </Col>
@@ -122,7 +143,7 @@ const CreateWarning = () => {
                 </Col>
               </Row>
               <Row>
-                <Divider>Một số thông tin thêm</Divider> 
+                <Divider className="subsec-title">Một số thông tin thêm</Divider> 
                   <Col span={16} offset={4}>
                   <Row gutter={24}>
 
@@ -170,6 +191,7 @@ const CreateWarning = () => {
             </Form>
 
         </Content>
+        </Layout>
       </Layout>
     </div>
   );
