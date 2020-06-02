@@ -9,7 +9,6 @@
 .form-body{
 	text-align: center;
 	padding: 25px;
-	margin: 25px;
 	background-color: #ececec;
 }
 
@@ -21,4 +20,15 @@
 .subsec-title{
 	font-size: 24px;
 	font-style: italic;
+}
+
+div.ant-form-item-control:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button{
+	margin: 20px;
+
+	width:120px;
+	height: 40px;
+	border-radius: 4px;
+}
+.ant-form-item-label{
+	text-align: left;
 }

@@ -18,7 +18,7 @@ const dateFormat = 'DD/MM/YYYY';
 const { TextArea } = Input;
 
 const layout = {
-  labelCol: { span: 4 },
+  labelCol: { span: 6},
   wrapperCol: { span: 18 },
 };
 
@@ -32,6 +32,23 @@ const validateMessages = {
     range: '${label} must be between ${min} and ${max}',
   },
 };
+
+const child = ["Pham Vi Phuong"
+                , "Vu Minh Phuong"
+                , "Ha Vu Hang"
+                , "Nguyen Ha Hinh"
+                , "Nhung Nhi Niem"
+                , "Mai Vien Phan"
+                , "Phan Van Nguyen"
+                , "Ha Viet Minh"
+                , "Minh Vu Phan"
+                , "Mai Hanh"
+                ];
+
+const render_child = [];
+child.forEach( e => {
+  render_child.push(<Option key={e}>{e}</Option>);
+})
 
 const children = [];
 for (let i = 10; i < 36; i++) {
@@ -72,7 +89,7 @@ const CreateWarning = () => {
                 <h1 className="sec-title">Tạo đợt kiểm tra mới</h1>
               </Col>
             </Row>
-            <Form name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
+            <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages} className="main-form">
               <Row gutter={24}>
                 <Divider className="subsec-title">Những thông tin chính</Divider>
                 <Col span={16} offset={4}>
@@ -116,8 +133,8 @@ const CreateWarning = () => {
                     </Col>
 
 
-                    <Col span={9}>
-                    <Form.Item name={['warning', 'address']} label="Người giám sát" rules={[{ required: true }]}>
+                    <Col span={8}>
+                    <Form.Item name={['warning', 'suppervisor']} label="Người giám sát" rules={[{ required: true }]}>
                       <Select defaultValue="1" >
                         <Option value="1">Nhóm VP.infinite></Option>                
                         <Option value="2">Nhóm The Boys</Option>
@@ -127,8 +144,20 @@ const CreateWarning = () => {
                     </Form.Item>
                     </Col>
 
-                    <Col span={9}>
-                    <Form.Item name={['warning', 'address']} label="Nhóm thực hiện" rules={[{ required: true }]}>
+
+                    <Col span={8}>
+                    <Form.Item name={['warning', 'manager']} label="Người Quản lý" rules={[{ required: true }]}>
+                      <Select defaultValue="1" >
+                        <Option value="1">Nhóm VP.infinite></Option>                
+                        <Option value="2">Nhóm The Boys</Option>
+                        <Option value="3">Nhóm The Ugly</Option>
+                        <Option value="4" >Nhóm mới</Option>
+                      </Select>   
+                    </Form.Item>
+                    </Col>
+
+                    <Col span={8}>
+                    <Form.Item name={['warning', 'actor']} label="Nhóm thực hiện" rules={[{ required: true }]}>
                       <Select defaultValue="normal" >
                         <Option value="Critical">Nhóm VP.infinite></Option>                
                         <Option value="high">Nhóm The Boys</Option>
@@ -148,30 +177,39 @@ const CreateWarning = () => {
                   <Row gutter={24}>
 
                     <Col span={6}>
-                    <Form.Item name={['warning', 'address']} label="Tài liệu" rules={[{ required: true }]}  wrapperCol={{ span: 18, offset:0}}>
+                    <Form.Item name={['warning', 'doc']} label="Tài liệu" wrapperCol={{ span: 18, offset:0}}>
                       <Button>
                         <UploadOutlined /> Click to Upload
                       </Button>   
                     </Form.Item>
                     </Col>
 
-
-
-                    <Col span={7}>
-                    <Form.Item name={['user', 'website']} label="Ngày kết thúc">
+                    <Col span={6}>
+                    <Form.Item name={['user', 'end']} label="Ngày kết thúc">
                       <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
                     </Form.Item>
                     </Col>
 
-                    <Col span={10}>
-                    <Form.Item name={['warning', 'address']} label="Đối tượng liên quan" rules={[{ required: true }]}>
+                    <Col span={6}>
+                    <Form.Item name={['user', 'report']} label="Ngày kiểm tra">
+                      <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
+                    </Form.Item>
+                    </Col>
+
+                    <Col span={6}>
+                    <Form.Item name={['user', 'report']} label="Ngày kiểm tra">
+                      <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
+                    </Form.Item>
+                    </Col>
+
+                    <Col span={24}>
+                    <Form.Item name={['warning', 'engineer']} label="Đối tượng liên quan">
                         <Select
                           mode="multiple"
                           style={{ width: '100%' }}
                           placeholder="Please select"
-                          defaultValue={['a10', 'c12']}
                         >
-                          {children}
+                          {render_child}
                         </Select>
                     </Form.Item>
                     </Col>
@@ -185,8 +223,9 @@ const CreateWarning = () => {
                   </Row>
                 </Col>
               </Row>
-              <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 3 }}>
+              <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
                 <Button type="primary" htmlType="submit">Submit</Button>
+                <Button >Cancel</Button>
               </Form.Item>
             </Form>
 
