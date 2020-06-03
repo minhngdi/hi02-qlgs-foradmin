@@ -2,7 +2,8 @@ import React from 'react';
 import './style.css';
 import PageHeader from '../../components/PageHeader';
 import Sidebar from '../../components/Sidebar';
-import SearchOnNav from '../../components/SearchOnNav';
+import PieChart from '../../components/PieChart';
+import ColChart from '../../components/ColChart';
 import {Layout, Card, Col, Row, Select, Alert, Breadcrumb} from 'antd';
 
 const { Sider, Content } = Layout;
@@ -33,12 +34,11 @@ function onSearch(val) {
     console.log('search:', val);
 }
 
-const WarningGrid = (props) => {
+const RedAlert = (props) => {
     return (
         <div>
             <Layout>
                 <PageHeader />
-                {/* <SearchOnNav /> */}
             </Layout>
             <Layout>
                 <Sider>
@@ -103,37 +103,20 @@ const WarningGrid = (props) => {
                             </Select>
                         </p> 
 
-                        {/* Top-Card */}
-                        <div className="top-card-wrapper">
-                            <Row gutter={16}>
-                                <Col span={8}>
-                                    <Card style={{ background: '#ff9c6e' }} title="Khẩn cấp" bordered={false}>
-                                        <h1>4</h1>
-                                        cảnh báo
-                                    </Card>
-                                </Col>
-                                <Col span={8}>
-                                    <Card style={{ background: '#fff566' }} title="Ưu tiên" bordered={false}>
-                                        <h1>5</h1>
-                                        cảnh báo
-                                    </Card>
-                                </Col>
-                                <Col span={8}>
-                                    <Card style={{ background: '#2db7f5' }} title="Ưu tiên thấp" bordered={false}>
-                                        <h1>3</h1>
-                                        cảnh báo
-                                    </Card>
-                                </Col>
-                            </Row>
-                        </div>
-
-                        {/* Chart-Card */}
-
-
-
                         {/* Location-Card */}
                         <div className="site-card-wrapper">
                             <Row className=".location-alert-grid" gutter={[16, 16]}>
+                                <Col span={6} >
+                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
+                                    <Card
+                                        bordered={true}
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
+                                    </Card>
+                                </Col>
                                 <Col span={6} >
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
@@ -175,8 +158,52 @@ const WarningGrid = (props) => {
                                         <Meta title="Khu vực Bắc Từ Liêm" description="Cột điện xuống cấp nặng" />
                                     </Card>
                                 </Col>
+                                <Col span={6} >
+                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
+                                    <Card
+                                        bordered={true}
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
+                                    </Card>
+                                </Col>
+                                <Col span={6} >
+                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
+                                    <Card
+                                        bordered={true}
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
+                                    </Card>
+                                </Col>
+                                <Col span={6} >
+                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
+                                    <Card
+                                        bordered={true}
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
+                                    </Card>
+                                </Col>
+                                <Col span={6} >
+                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
+                                    <Card
+                                        bordered={true}
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
+                                    </Card>
+                                </Col>
                             </Row>
-
+{/* 
                             <Row className=".location-alert-grid" gutter={[16, 16]}>
                                 <Col span={6} >
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
@@ -260,7 +287,7 @@ const WarningGrid = (props) => {
                                         <Meta title="Khu vực Hoàn Kiếm" description="Bảo trì công tơ" />
                                     </Card>
                                 </Col>
-                            </Row>
+                            </Row> */}
                         </div>
 
                     </Content>
@@ -271,4 +298,4 @@ const WarningGrid = (props) => {
 
 }
 
-export default WarningGrid;
+export default RedAlert;

@@ -1,40 +1,66 @@
-import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import React from "react";
+import { Link } from "react-router-dom";
+import './style.css';
+import { Layout, Menu } from "antd";
 import {
     HomeOutlined,
     AlertOutlined,
-    AuditOutlined,
-} from '@ant-design/icons';
+    MonitorOutlined,
+} from "@ant-design/icons";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 class Sidebar extends React.Component {
-    state = {
-        collapsed: false,
-    };
-
-    onCollapse = collapsed => {
-        console.log(collapsed);
-        this.setState({ collapsed });
-    };
-
     render() {
         return (
-            <Layout style={{ minHeight: '100vh' }}>
-                <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
+            <Layout className="layout-background" >
+                <Sider className="site-layout-background">
                     <div className="logo" />
-                    <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+                    {/* <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline"> */}
+                    <Menu mode="inline">
                         <Menu.Item key="1" icon={<HomeOutlined />}>
                             Trang chủ
                   </Menu.Item>
                         <SubMenu key="sub1" icon={<AlertOutlined />} title="Cảnh báo">
-                            <Menu.Item key="3">Hiển thị cảnh báo</Menu.Item>
-                            <Menu.Item key="4">Thống kê cảnh báo</Menu.Item>
+                            <Menu.Item key="3" activeClassName="showAlert">
+                                <Link to={`/alert`}>
+                                    Hiển thị cảnh báo
+                                    </Link>
+                            </Menu.Item>
+                            <Menu.Item key="4" activeClassName="showAlert">
+                                <Link to={`/redalert`}>
+                                    DS khẩn cấp
+                                    </Link>
+                            </Menu.Item>
+                            <Menu.Item key="5" activeClassName="showAlert">
+                                <Link to={`/yellowalert`}>
+                                    DS ưu tiên
+                                    </Link>
+                            </Menu.Item>
+                            <Menu.Item key="6" activeClassName="showAlert">
+                                <Link to={`/greenalert`}>
+                                    DS ưu tiên thấp
+                                    </Link>
+                            </Menu.Item>
+                            <Menu.Item key="7">
+                                <Link to={`/dashboard`}>
+                                    Thống kê cảnh báo
+                                    </Link>
+                            </Menu.Item>
                         </SubMenu>
-                        <Menu.Item key="2" icon={<AuditOutlined />}>
-                            Đợt kiểm tra
-                  </Menu.Item>
+                        <SubMenu key="sub2" icon={<MonitorOutlined />} title="Đợt kiểm tra">
+                            <Menu.Item key="3" activeClassName="showAlert">
+                                <Link to={`/addcheck`}>
+                                    Tạo đợt kiểm tra
+                                    </Link>
+                            </Menu.Item>
+                            <Menu.Item key="4">
+                                <Link to={`/checklist`}>
+                                    Danh sách đkt
+                                    </Link>
+                            </Menu.Item>
+                        </SubMenu>
                     </Menu>
                 </Sider>
             </Layout>

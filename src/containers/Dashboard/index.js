@@ -37,11 +37,6 @@ function onSearch(val) {
 const Dashboard = (props) => {
     return (
         <div>
-            {/* <Layout >
-                <Header className="title">
-                    <p>HI02_Quản lý giám sát - IT4442_2019II</p>
-                </Header>
-            </Layout> */}
             <Layout>
                 <PageHeader />
             </Layout>
@@ -50,11 +45,11 @@ const Dashboard = (props) => {
                     <Sidebar />
                 </Sider>
                 <Layout style={{ padding: '0 24px 24px' }}>
-                    <Breadcrumb style={{}}>
+                    {/* <Breadcrumb style={{}}>
                         <Breadcrumb.Item>Home</Breadcrumb.Item>
                         <Breadcrumb.Item>Manage Monitoring</Breadcrumb.Item>
                         <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
-                    </Breadcrumb>
+                    </Breadcrumb> */}
                     <Content className="body-mod">
                         {/* Filter */}
                         {/*<p>Lọc theo dự án &nbsp; &nbsp;*/}
