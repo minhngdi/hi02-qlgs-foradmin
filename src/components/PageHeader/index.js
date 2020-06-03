@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Layout, Menu } from 'antd';
 import { Link } from "react-router-dom";
 import './style.css';
@@ -8,6 +8,7 @@ import {
     RedditOutlined,
     AuditOutlined,
 } from "@ant-design/icons";
+import SearchOnNav from '../SearchOnNav';
 
 const { Header } = Layout;
 const { SubMenu } = Menu;
@@ -19,7 +20,7 @@ const PageHeader = (props) => {
                 <div className="logo">
                     <p style={{ color: 'white' }}>Quản lý mạng lưới điện</p>
                 </div>
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+                <Menu theme="dark" mode="horizontal" SelectedKeys={['2']}>
                     <SubMenu key="sub0" icon={<BuildOutlined />} title="GS thi công">
                         <Menu.Item key="21" activeClassName="showAlert">
                             Danh sách công trình
@@ -65,6 +66,9 @@ const PageHeader = (props) => {
                             Xem danh sách báo cáo
                         </Menu.Item>
                     </SubMenu>
+                    <Menu.Item key="ab" className="searchbox">
+                        <SearchOnNav />
+                    </Menu.Item>
                 </Menu>
             </Header>
         </Layout>

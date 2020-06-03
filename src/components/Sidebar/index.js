@@ -28,7 +28,22 @@ class Sidebar extends React.Component {
                                     Hiển thị cảnh báo
                                     </Link>
                             </Menu.Item>
-                            <Menu.Item key="4">
+                            <Menu.Item key="4" activeClassName="showAlert">
+                                <Link to={`/redalert`}>
+                                    DS khẩn cấp
+                                    </Link>
+                            </Menu.Item>
+                            <Menu.Item key="5" activeClassName="showAlert">
+                                <Link to={`/yellowalert`}>
+                                    DS ưu tiên
+                                    </Link>
+                            </Menu.Item>
+                            <Menu.Item key="6" activeClassName="showAlert">
+                                <Link to={`/greenalert`}>
+                                    DS ưu tiên thấp
+                                    </Link>
+                            </Menu.Item>
+                            <Menu.Item key="7">
                                 <Link to={`/dashboard`}>
                                     Thống kê cảnh báo
                                     </Link>

@@ -2,7 +2,8 @@ import React from 'react';
 import './style.css';
 import PageHeader from '../../components/PageHeader';
 import Sidebar from '../../components/Sidebar';
-import SearchOnNav from '../../components/SearchOnNav';
+import PieChart from '../../components/PieChart';
+import ColChart from '../../components/ColChart';
 import {Layout, Card, Col, Row, Select, Alert, Breadcrumb} from 'antd';
 
 const { Sider, Content } = Layout;
@@ -33,12 +34,11 @@ function onSearch(val) {
     console.log('search:', val);
 }
 
-const WarningGrid = (props) => {
+const GreenAlert = (props) => {
     return (
         <div>
             <Layout>
                 <PageHeader />
-                {/* <SearchOnNav /> */}
             </Layout>
             <Layout>
                 <Sider>
@@ -103,132 +103,8 @@ const WarningGrid = (props) => {
                             </Select>
                         </p> 
 
-                        {/* Top-Card */}
-                        <div className="top-card-wrapper">
-                            <Row gutter={16}>
-                                <Col span={8}>
-                                    <Card style={{ background: '#ff9c6e' }} title="Khẩn cấp" bordered={false}>
-                                        <h1>4</h1>
-                                        cảnh báo
-                                    </Card>
-                                </Col>
-                                <Col span={8}>
-                                    <Card style={{ background: '#fff566' }} title="Ưu tiên" bordered={false}>
-                                        <h1>5</h1>
-                                        cảnh báo
-                                    </Card>
-                                </Col>
-                                <Col span={8}>
-                                    <Card style={{ background: '#2db7f5' }} title="Ưu tiên thấp" bordered={false}>
-                                        <h1>3</h1>
-                                        cảnh báo
-                                    </Card>
-                                </Col>
-                            </Row>
-                        </div>
-
-                        {/* Chart-Card */}
-
-
-
                         {/* Location-Card */}
                         <div className="site-card-wrapper">
-                            <Row className=".location-alert-grid" gutter={[16, 16]}>
-                                <Col span={6} >
-                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
-                                    <Card
-                                        bordered={true}
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
-                                    </Card>
-                                </Col>
-                                <Col span={6} >
-                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
-                                    <Card
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://img.vtcnew.com.vn/files/f2/2014/03/19/ha-noi-ma-tran-cot-dien-bay-nguoi-di-duong-0.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Đống Đa" description="Cây đổ lên dây điện" />
-                                    </Card>
-                                </Col>
-                                <Col span={6} >
-                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
-                                    <Card
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="http://cafebiz.cafebizcdn.vn/thumb_w/640/2016/photo-2-1481634743125.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Nam Từ Liêm" description="Chập điện" />
-                                    </Card>
-                                </Col>
-                                <Col span={6}>
-                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
-                                    <Card
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://icdn.dantri.com.vn/OlRTd1upOguwZHvZpzsc/Image/2013/02/tru-dien-31839.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Bắc Từ Liêm" description="Cột điện xuống cấp nặng" />
-                                    </Card>
-                                </Col>
-                            </Row>
-
-                            <Row className=".location-alert-grid" gutter={[16, 16]}>
-                                <Col span={6} >
-                                    <Alert message="Ưu tiên" type="warning" showIcon closable />
-                                    <Card
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="http://cafebiz.cafebizcdn.vn/thumb_w/640/2016/photo-2-1481634743125.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Cầu Diễn" description="dây quá rối" />
-                                    </Card>
-                                </Col>
-                                <Col span={6} >
-                                    <Alert message="Ưu tiên" type="warning" showIcon closable />
-                                    <Card
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://photo-2-baomoi.zadn.vn/2019_05_23_19_30822052/6b0ec677d13738696126.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Thanh Xuân" description="Dây bị trùng xuống" />
-                                    </Card>
-                                </Col>
-                                <Col span={6} >
-                                    <Alert message="Ưu tiên" type="warning" showIcon closable />
-                                    <Card
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://media1.nguoiduatin.vn/media/hoang-van-viet/2019/09/02/xe-tai-lui-tong-do-nhieu-cot-dien-nguoi-dan-chiu-canh-khong-co-dien-trong-ngay-nghi-le.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Hoàn Kiếm" description="Độ cao dây quá thấp" />
-                                    </Card>
-                                </Col>
-                                <Col span={6} >
-                                    <Alert message="Ưu tiên" type="warning" showIcon closable />
-                                    <Card
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://media1.nguoiduatin.vn/media/hoang-van-viet/2019/09/02/xe-tai-lui-tong-do-nhieu-cot-dien-nguoi-dan-chiu-canh-khong-co-dien-trong-ngay-nghi-le.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Hoàn Kiếm" description="Cần cắt tỉa cây xung quanh" />
-                                    </Card>
-                                </Col>
-                                <Col span={6} >
-                                    <Alert message="Ưu tiên" type="warning" showIcon closable />
-                                    <Card
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://media1.nguoiduatin.vn/media/hoang-van-viet/2019/09/02/xe-tai-lui-tong-do-nhieu-cot-dien-nguoi-dan-chiu-canh-khong-co-dien-trong-ngay-nghi-le.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Hoàn Kiếm" description="Cần di chuyển cột điện đến vị trí mới" />
-                                    </Card>
-                                </Col>
-                            </Row>
                             <Row className=".location-alert-grid" gutter={[16, 16]}>
                                 <Col span={6} >
                                     <Alert message="Ưu tiên thấp" type="info" showIcon closable />
@@ -260,6 +136,36 @@ const WarningGrid = (props) => {
                                         <Meta title="Khu vực Hoàn Kiếm" description="Bảo trì công tơ" />
                                     </Card>
                                 </Col>
+                                <Col span={6} >
+                                    <Alert message="Ưu tiên thấp" type="info" showIcon closable />
+                                    <Card
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://photo-2-baomoi.zadn.vn/2019_05_23_19_30822052/6b0ec677d13738696126.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Thanh Xuân" description="Lắp đặt công tơ mới" />
+                                    </Card>
+                                </Col>
+                                <Col span={6} >
+                                    <Alert message="Ưu tiên thấp" type="info" showIcon closable />
+                                    <Card
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://photo-2-baomoi.zadn.vn/2019_05_23_19_30822052/6b0ec677d13738696126.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Thanh Xuân" description="Lắp đặt công tơ mới" />
+                                    </Card>
+                                </Col>
+                                <Col span={6} >
+                                    <Alert message="Ưu tiên thấp" type="info" showIcon closable />
+                                    <Card
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://photo-2-baomoi.zadn.vn/2019_05_23_19_30822052/6b0ec677d13738696126.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Thanh Xuân" description="Lắp đặt công tơ mới" />
+                                    </Card>
+                                </Col>
                             </Row>
                         </div>
 
@@ -271,4 +177,4 @@ const WarningGrid = (props) => {
 
 }
 
-export default WarningGrid;
+export default GreenAlert;

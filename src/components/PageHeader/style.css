@@ -11,4 +11,17 @@
     float: left;
     text-align: center;
     font-size: medium;
-  }
+}
+
+.searchbox {
+    float: right;
+    padding-top: -20px;
+    position: absolute;
+    -ms-transform: translateY(-15%);
+    transform: translateY(-15%);
+
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected.searchbox {
+    background-color: black;
+}
