@@ -1,0 +1,12 @@
+.site-layout-background {
+    background: #fff;
+    overflow: 'auto';
+    height: '100vh';
+    position: 'fixed';
+    left: 0;
+  }
+
+.layout-background {
+    background: #fff;
+    height: 100%;
+}

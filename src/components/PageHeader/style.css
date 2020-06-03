@@ -2,3 +2,13 @@
     color: 'white';
     text-align: left;
 }
+
+.logo {
+    width: 200px;
+    height: 31px;
+    margin: auto;
+    margin-left: -50px;
+    float: left;
+    text-align: center;
+    font-size: medium;
+  }

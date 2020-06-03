@@ -9,34 +9,6 @@ import Inspection from "./containers/Inspection";
 import CreateWarning from "./containers/Warning/CreateWarning";
 import WarningGrid from "./containers/WarningGrid";
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-const Landing = () => (
-  <div>
-    <h3>This is landing page with Foo and Bar</h3>
-    <Dashboard />
-    <WarningGrid />
-  </div>
-);
-//  const Dashboard = () => <Dashboard />;
-//  const WarningGrid = () => <WarningGrid />;
-// const About = () => <div>This is component About.</div>;
-// const Header = () => (
-//   <div style={{height: "30px", background: "gray"}}>Header | 
-//   <Link to="/about"> Go to about</Link>
-//   </div>
-// );
-// const Footer = () => (
-//   <div style={{ height: "30px", background: "gray" }}>Footer |
-//   <Link to="/about"> Go to about</Link>
-//   </div>
-// );
-
 const NotFound = () => <div>Not found</div>
 
 class App1 extends React.Component {
@@ -46,9 +18,11 @@ class App1 extends React.Component {
       <BrowserRouter>
         <div>
             <Switch>
-              <Route exact path="/" component={Landing} />
+              <Route exact path="/" component={Dashboard} />
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/alert" component={WarningGrid} />
+              <Route path="/addcheck" component={CreateWarning} />   
+              <Route path="/checklist" component={Inspection} />              
               <Route component={NotFound} />
             </Switch>
         </div>
