@@ -37,11 +37,6 @@ function onSearch(val) {
 const Dashboard = (props) => {
     return (
         <div>
-            {/* <Layout >
-                <Header className="title">
-                    <p>HI02_Quản lý giám sát - IT4442_2019II</p>
-                </Header>
-            </Layout> */}
             <Layout>
                 <PageHeader />
             </Layout>
