@@ -1,5 +1,4 @@
 {
-  "homepage": "https://minhngdi.github.io/hi02-it4442-2019ii",
   "name": "hi02-qlgs-foradmin",
   "version": "0.1.0",
   "private": true,
@@ -24,11 +23,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages1 -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -b master -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
