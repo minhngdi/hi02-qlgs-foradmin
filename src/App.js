@@ -5,7 +5,7 @@ import { Switch, Router, Route, IndexRoute, hashHistory } from "react-router";
 import "./App.css";
 import Dashboard from "./containers/Dashboard";
 import Inspection from "./containers/Inspection";
-import CreateWarning from "./containers/Warning/CreateWarning";
+import CreateWarning from "./containers/Warning";
 import WarningGrid from "./containers/WarningGrid";
 
 function App() {

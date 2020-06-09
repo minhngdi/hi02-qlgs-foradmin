@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Column } from '@ant-design/charts';
+import { Bar } from '@ant-design/charts';
 
 const ColChart = (props) => {
     const data = [
@@ -60,7 +60,7 @@ const ColChart = (props) => {
           position: 'middle',
         },
       };
-      return <Column {...config} />;
+      return <Bar {...config} />;
 };
 
 export default ColChart;

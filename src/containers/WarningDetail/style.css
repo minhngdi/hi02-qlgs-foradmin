@@ -1,0 +1,19 @@
+.form-body{
+	text-align: left;
+	height: 90vh;
+}
+.form-body .ant-descriptions-row{
+	background-color: white;
+}
+
+.form-body .detail{
+	display: inline-block;
+	margin-right: 5px;
+}
+.form-body .detail:not(:last-of-type):after {
+  content: ",";
+}
+
+.sec-title{
+	text-align: center;
+}

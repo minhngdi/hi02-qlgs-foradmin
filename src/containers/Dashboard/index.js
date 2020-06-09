@@ -231,7 +231,7 @@ const Dashboard = (props) => {
                 </Layout>
             </Layout>
         </div >
-    )
+    );
 
 }
 
