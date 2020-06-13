@@ -125,10 +125,10 @@ const CreateWarning = () => {
                     <Col span={6}>
                     <Form.Item name={['user', 'age']} label="Mức độ" rules={[{ required: true }]}>
                       <Select defaultValue="normal" >
-                        <Option value="Critical">Nghiêm trọng</Option>                
-                        <Option value="high">Cao</Option>
-                        <Option value="normal">Trung bình</Option>
-                        <Option value="low" >Thấp</Option>
+                        <Option value="Critical">Khẩn cấp</Option>                
+                        <Option value="high">Ưu tiên</Option>
+                        <Option value="normal">Ưu tiên thấp</Option>
+                        <Option value="low" >Không ưu tiên</Option>
                       </Select>           
                     </Form.Item>
                     </Col>

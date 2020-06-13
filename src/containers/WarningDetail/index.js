@@ -55,7 +55,7 @@ return (
         		<Col span={24}>
         			<h1 className="sec-title">Chi tiết đợt kiểm tra</h1>
         		</Col>
-	        	<Col row={18}>
+	        	<Col span={18}>
 			        <Descriptions bordered title="Thông tin cơ bản" size='default' column={3}>
 			        	<Descriptions.Item label="Tên đợt kiểm tra">An Dương Vương - Nghi Tàm B19271816</Descriptions.Item>
 			        	<Descriptions.Item label="Phân loại">Bảo trì</Descriptions.Item>
@@ -88,14 +88,32 @@ return (
 			        
 					</Descriptions>
 	        	</Col>
-	        	<Col row={5} offset={1}>
-	        	  <Card
-					    hoverable
-					    style={{ height: 300, width: '100%' }}
-					    cover={<img alt="example" src="https://lh3.googleusercontent.com/proxy/JZ23FuzjWncYO5hw0aOUS2vPClZf_ZxTfqrwod_2gtcR47C2530XZChOAlsSpYkPGxC_GQjClsqhVfcP4wmRB3jiaP-PdH-VKm82SJm48JT5CzVTrOeW23dV4A" />}>
-					    <Meta title="Hình ảnh minh họa" />
-					</Card>
-	        		
+	        	<Col span={5} offset={1} >
+	        	<div className="description_img">
+		        	<Carousel autoplay  dotPosition="top">
+		        	  <Card
+						    hoverable
+						    cover={<img alt="example" src="http://cdn.kinhtedothi.vn/497/2017/1/9/cot-dien.jpg" />}>
+						    <Meta title="Hình ảnh minh họa" />
+						</Card>
+		        	  <Card
+						    hoverable
+						    cover={<img alt="example" src="http://cdn.kinhtedothi.vn/497/2017/1/9/cot-dien-12.jpg" />}>
+						    <Meta title="Hình ảnh minh họa" />
+						</Card>
+		        	  <Card
+						    hoverable
+						    cover={<img alt="example" src="http://cdn.kinhtedothi.vn/524/2017/2/21/cot-dien-nam-giua-duong.jpg" />}>
+						    <Meta title="Hình ảnh minh họa" />
+						</Card>
+		        	  <Card
+						    hoverable
+						    cover={<img alt="example" src="http://cdn.kinhtedothi.vn/524/2017/2/15/da-soat-cot-dien.jpg" />}>
+						    <Meta title="Hình ảnh minh họa" />
+						</Card>
+		        	</Carousel>
+		        		
+	        	</div>
 	        	</Col>
         	</Row>
         </Content>

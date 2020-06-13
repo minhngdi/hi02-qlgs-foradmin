@@ -6,6 +6,15 @@
 	background-color: white;
 }
 
+.form-body .description_img{
+    width: 100%;
+}
+
+.form-body .description_img div.ant-carousel div.slick-slider.slick-initialized div.slick-list div.slick-track div.slick-slide div div.ant-card.ant-card-bordered.ant-card-hoverable div.ant-card-cover img{
+	width:100%;
+    height: 400px;
+}
+
 .form-body .detail{
 	display: inline-block;
 	margin-right: 5px;
@@ -17,3 +26,4 @@
 .sec-title{
 	text-align: center;
 }
+

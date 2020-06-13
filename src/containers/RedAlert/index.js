@@ -107,6 +107,20 @@ const RedAlert = (props) => {
                         <div className="site-card-wrapper">
                             <Row className=".location-alert-grid" gutter={[16, 16]}>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
+                                    <Alert message="Khẩn cấp" type="error" showIcon closable   />
+                                    <Card
+                                        bordered={true}
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
+                                    </Card>
+                                    </div>
+                                </Col>
+                                <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         bordered={true}
@@ -116,19 +130,10 @@ const RedAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
-                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
-                                    <Card
-                                        bordered={true}
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
-                                    </Card>
-                                </Col>
-                                <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         hoverable
@@ -137,8 +142,10 @@ const RedAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Đống Đa" description="Cây đổ lên dây điện" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         hoverable
@@ -147,8 +154,10 @@ const RedAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Nam Từ Liêm" description="Chập điện" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6}>
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         hoverable
@@ -157,8 +166,10 @@ const RedAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Bắc Từ Liêm" description="Cột điện xuống cấp nặng" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         bordered={true}
@@ -168,8 +179,23 @@ const RedAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
+                                    <Alert message="Khẩn cấp" type="error"  showIcon closable />
+                                    <Card
+                                        bordered={true}
+                                        hoverable
+                                        style={{ height: 300, width: '100%' }}
+                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
+                                    >
+                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
+                                    </Card>
+                                    </div>
+                                </Col>
+                                <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         bordered={true}
@@ -179,8 +205,10 @@ const RedAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Khẩn cấp" type="error" showIcon closable />
                                     <Card
                                         bordered={true}
@@ -190,17 +218,7 @@ const RedAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
                                     </Card>
-                                </Col>
-                                <Col span={6} >
-                                    <Alert message="Khẩn cấp" type="error" showIcon closable />
-                                    <Card
-                                        bordered={true}
-                                        hoverable
-                                        style={{ height: 300, width: '100%' }}
-                                        cover={<img height='200px' alt="example" src="https://media.doisongphapluat.com/447/2016/6/11/ngoi-nha-nuot-cot-dien1161.jpg" />}
-                                    >
-                                        <Meta title="Khu vực Cầu Giấy" description="Cháy cột điện" />
-                                    </Card>
+                                    </div>
                                 </Col>
                             </Row>
 {/* 

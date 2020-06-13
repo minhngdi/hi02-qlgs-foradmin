@@ -107,6 +107,7 @@ const GreenAlert = (props) => {
                         <div className="site-card-wrapper">
                             <Row className=".location-alert-grid" gutter={[16, 16]}>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên thấp" type="info" showIcon closable />
                                     <Card
                                         hoverable
@@ -115,8 +116,10 @@ const GreenAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Cầu Diễn" description="Lắp đặt công tơ mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên thấp" type="info" showIcon closable />
                                     <Card
                                         hoverable
@@ -125,8 +128,10 @@ const GreenAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Thanh Xuân" description="Lắp đặt công tơ mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên thấp" type="info" showIcon closable />
                                     <Card
                                         hoverable
@@ -135,8 +140,10 @@ const GreenAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description="Bảo trì công tơ" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên thấp" type="info" showIcon closable />
                                     <Card
                                         hoverable
@@ -145,8 +152,10 @@ const GreenAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Thanh Xuân" description="Lắp đặt công tơ mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên thấp" type="info" showIcon closable />
                                     <Card
                                         hoverable
@@ -155,8 +164,10 @@ const GreenAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Thanh Xuân" description="Lắp đặt công tơ mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên thấp" type="info" showIcon closable />
                                     <Card
                                         hoverable
@@ -165,6 +176,7 @@ const GreenAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Thanh Xuân" description="Lắp đặt công tơ mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                             </Row>
                         </div>

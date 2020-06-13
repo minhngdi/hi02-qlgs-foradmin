@@ -107,6 +107,7 @@ const YellowAlert = (props) => {
                         <div className="site-card-wrapper">
                         <Row className=".location-alert-grid" gutter={[16, 16]}>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
@@ -115,6 +116,7 @@ const YellowAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Cầu Diễn" description="dây quá rối" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
@@ -127,6 +129,7 @@ const YellowAlert = (props) => {
                                     </Card>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
@@ -135,8 +138,10 @@ const YellowAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description="Độ cao dây quá thấp" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
@@ -145,8 +150,10 @@ const YellowAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description="Cần cắt tỉa cây xung quanh" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
@@ -155,8 +162,10 @@ const YellowAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description="Cần di chuyển cột điện đến vị trí mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
@@ -165,8 +174,10 @@ const YellowAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description="Cần di chuyển cột điện đến vị trí mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
@@ -175,8 +186,10 @@ const YellowAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description="Cần di chuyển cột điện đến vị trí mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
@@ -185,8 +198,10 @@ const YellowAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description="Cần di chuyển cột điện đến vị trí mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                                 <Col span={6} >
+                                    <div onClick={() => window.location="/alertdetail"}>
                                     <Alert message="Ưu tiên" type="warning" showIcon closable />
                                     <Card
                                         hoverable
@@ -195,6 +210,7 @@ const YellowAlert = (props) => {
                                     >
                                         <Meta title="Khu vực Hoàn Kiếm" description="Cần di chuyển cột điện đến vị trí mới" />
                                     </Card>
+                                    </div>
                                 </Col>
                             </Row>
                         </div>
