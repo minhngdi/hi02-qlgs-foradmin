@@ -12,6 +12,8 @@ import RedAlert from './containers/RedAlert';
 import YellowAlert from './containers/YellowAlert';
 import GreenAlert from './containers/GreenAlert';
 import WarningDetail from './containers/WarningDetail';
+import LoginPage from "./containers/LoginPage";
+import RegisterPage from "./containers/RegisterPage";
 
 const NotFound = () => <div>Not found</div>
 
@@ -30,7 +32,9 @@ class App1 extends React.Component {
               <Route path="/alertdetail" component={WarningDetail} />
               <Route path="/greenalert" component={GreenAlert} />
               <Route path="/addcheck" component={CreateWarning} />   
-              <Route path="/checklist" component={Inspection} />              
+              <Route path="/checklist" component={Inspection} />         
+              <Route path="/login" component={LoginPage} />
+              <Route path="/register" component={RegisterPage} />
               <Route component={NotFound} />
             </Switch>
         </div>
