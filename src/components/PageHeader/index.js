@@ -76,21 +76,30 @@ class PageHeader extends React.Component {
                         </SubMenu>
                         <SubMenu key="sub2" icon={<RedditOutlined />} title="Drones">
                             <Menu.Item key="21" activeClassName="showAlert">
-                                Tạo hành trình
+                                <a href="https://nguyenvd27.github.io/HI_template/public/">Tạo hành trình</a>
                         </Menu.Item>
                             <Menu.Item key="22">
-                                QL dữ liệu chuyến bay
+                                <a href="https://drnguyen2525.github.io/hci-flight-management/">QL dữ liệu chuyến bay</a>
+                        </Menu.Item>
+                            <Menu.Item key="50">
+                                <a href="https://mighty-ravine-43801.herokuapp.com/hi08">Danh sách Drone</a>
+                        </Menu.Item>
+                            <Menu.Item key="51">
+                                <a href="hhttps://www.figma.com/proto/vtNY9oE4CgxBhNfIQ83mGY/20192?node-id=95%3A2&scaling=scale-down&fbclid=IwAR3G0wHcH_WnV9JCKsoQ8wKTpttnKlMs5FEva2DmQ_OMfYDqOTHRRflg5Rg">Điều khuyển Drone</a>
                         </Menu.Item>
                         </SubMenu>
                         <SubMenu key="sub3" icon={<AuditOutlined />} title="QL sự cố - Báo cáo">
                             <Menu.Item key="31" activeClassName="showAlert">
-                                Phát hiện sự cố
+                                <a href="https://nnhhai.github.io/">Phát hiện sự cố</a>
                         </Menu.Item>
-                            <Menu.Item key="32">
-                                Tạo báo cáo
+                            <Menu.Item key="32" activeClassName="showAlert">
+                                <a href="http://100.26.57.128/#/dashboard">Danh sách sự cố</a>
                         </Menu.Item>
                             <Menu.Item key="33">
-                                Xem danh sách báo cáo
+                                <a href="https://hi10-electric-report.herokuapp.com/">Tạo báo cáo</a>
+                        </Menu.Item>
+                            <Menu.Item key="34">
+                                <a href="https://electric-report-a846b.web.app/">Xem danh sách báo cáo</a>
                         </Menu.Item>
                         </SubMenu>
                         <Menu.Item className="avatar">
