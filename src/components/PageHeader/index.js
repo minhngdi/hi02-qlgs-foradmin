@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Avatar, Dropdown } from 'antd';
+import { Layout, Menu, Avatar, Dropdown, Modal } from 'antd';
 import { Link } from "react-router-dom";
 import './style.css';
 import {
@@ -10,26 +10,35 @@ import {
     UserOutlined
 } from "@ant-design/icons";
 import SearchOnNav from '../SearchOnNav';
-// import { ReactComponent } from '*.svg';
+import loginImg from "../../img/login.png";
+import RegisterPage from '../../containers/RegisterPage';
 
 const { Header } = Layout;
 const { SubMenu } = Menu;
-const menu = (
-    <Menu>
-        <Menu.Item >
-            <Link to={`/login`}>
-                Đăng nhập
-            </Link>
-        </Menu.Item>
-        <Menu.Item>
-            <Link to={`/register`}>
-                Đăng ký
-            </Link>
-        </Menu.Item>
-    </Menu>
-  );
 
 class PageHeader extends React.Component {
+
+    state = { visible: false };
+
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+
+    handleOk = e => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    };
+
+    handleCancel = e => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    };
 
     render() {
         return (
@@ -41,7 +50,7 @@ class PageHeader extends React.Component {
                     <Menu theme="dark" mode="horizontal" SelectedKeys={['2']}>
                         <SubMenu key="sub0" icon={<BuildOutlined />} title="GS thi công">
                             <Menu.Item key="21" activeClassName="showAlert">
-                                Danh sách công trình
+                                <a href="https://hi01-efd.web.app/"> Danh sách công trình</a>
                         </Menu.Item>
                             <Menu.Item key="21" activeClassName="showAlert">
                                 Tạo công trình
@@ -85,9 +94,50 @@ class PageHeader extends React.Component {
                         </Menu.Item>
                         </SubMenu>
                         <Menu.Item className="avatar">
-                            <Dropdown overlay={menu}>
+                            {/* <Dropdown overlay={menu}> */}
+                            <Dropdown overlay={
+                                <Menu>
+                                    <Menu.Item onClick={this.showModal}>
+                                            Đăng nhập
+                                    </Menu.Item>
+                                    <Menu.Item onClick={confirm}>
+                                            Đăng ký
+                                    </Menu.Item>
+                                </Menu>
+                            }>
                                 <div>
                                     <Avatar shape="square" size={40} icon={<UserOutlined />} />
+                                    <Modal
+                                        visible={this.state.visible}
+                                        onOk={this.handleOk}
+                                        onCancel={this.handleCancel}
+                                        cancelButtonProps={{ style: { display: 'none' } }}
+                                        okButtonProps={{ style: { display: 'none' } }}
+                                    >
+                                        <div className="base-container" >
+                                            <div className="header">Đăng nhập</div>
+                                            <div className="content">
+                                                <div className="image">
+                                                    <img src={loginImg} alt="" />
+                                                </div>
+                                                <div className="form">
+                                                    <div className="form-group">
+                                                        <label htmlFor="username">Tài khoản</label>
+                                                        <input type="text" name="username" placeholder="nhập tài khoản..."></input>
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <label htmlFor="password">Mật khẩu</label>
+                                                        <input type="password" name="password" placeholder="nhập mật khẩu..."></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="footer">
+                                                <button type="button" className="btn">
+                                                    Đăng nhập
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </Modal>
                                 </div>
                             </Dropdown>
                         </Menu.Item>
@@ -103,3 +153,15 @@ class PageHeader extends React.Component {
 }
 
 export default PageHeader
+
+function confirm() {
+    Modal.confirm({
+        content: (
+            <div>
+                <RegisterPage />
+            </div>
+        ),
+        cancelButtonProps: { style: { display: 'none' } },
+        okButtonProps: { style: { display: 'none' } },
+    });
+}
