@@ -174,8 +174,8 @@ const columns = [
         key: 'action',
         render: () => (
             <span>
-                <a style={{ marginRight: 16 }}>View</a>
-                <a style={{ marginRight: 16 }}>Edit</a>
+                <a href='/alertdetail' style={{ marginRight: 16 }}>View</a>
+                <a href='/alertdetail' style={{ marginRight: 16 }}>Edit</a>
                 <a style={{ marginRight: 16 }}>Delete</a>
       </span>
         ),
