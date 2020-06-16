@@ -20,7 +20,7 @@ class Sidebar extends React.Component {
                     {/* <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline"> */}
                     <Menu mode="inline">
                         <Menu.Item key="1" icon={<HomeOutlined />}>
-                            <Link to={`/alert`}>
+                            <Link to={`/home`}>
                                 Trang chủ
                                     </Link>
                         </Menu.Item>
