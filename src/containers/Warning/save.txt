@@ -18,11 +18,11 @@ const dateFormat = 'DD/MM/YYYY';
 const { TextArea } = Input;
 
 const layout = {
-  labelCol: { span: 4},
-  wrapperCol: { span: 20 },
+  // labelCol: { span: 8},
+  // wrapperCol: { span: 16 },
 
-  // labelCol: { span: 0},
-  // wrapperCol: { span: 0 },
+  labelCol: { span: 0},
+  wrapperCol: { span: 0 },
 };
 
 const { Option2 } = Mentions;
@@ -104,15 +104,15 @@ const CreateWarning = () => {
             <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages} className="main-form">
               <Row gutter={24}>
                 <Divider className="subsec-title">Những thông tin chính</Divider>
-                <Col md={16} offset={4}>
+                <Col span={16} offset={4}>
                   <Row gutter={24}>
 
-                    <Col md={24}>
+                    <Col span={12}>
                     <Form.Item name={['warning', 'name']} label="Tên công trình kiểm tra" rules={[{ required: true }]}>
                       <Input />
                     </Form.Item>
                     </Col>
-                    <Col md={24}>
+                    <Col span={6}>
                     <Form.Item name={['user', 'age']} label="Phân loại" rules={[{ required: true }]}>
                       <Select defaultValue="Maintenance" >
                         <Option value="Maintenance">Bảo trì</Option>
@@ -122,7 +122,7 @@ const CreateWarning = () => {
                     </Form.Item>
                     </Col>
                                         
-                    <Col md={24} sm={24}>
+                    <Col span={6}>
                     <Form.Item name={['user', 'age']} label="Mức độ" rules={[{ required: true }]}>
                       <Select defaultValue="normal" >
                         <Option value="Critical">Khẩn cấp</Option>                
@@ -134,14 +134,30 @@ const CreateWarning = () => {
                     </Col>
 
 
-                    <Col md={24} sm={24}>
+                    <Col span={12}>
                     <Form.Item  name={['warning', 'address']} label="Địa chỉ" rules={[{ required: true }]}>
                       <Input />
                     </Form.Item>
                     </Col>
 
+                    <Col span={6}>
+                    <Form.Item name={['user', 'age']} label="Thành phố" rules={[{ required: true }]}>
+                      <Select defaultValue="1" >
+                        <Option value="1">Hà Nội</Option>                
+                        <Option value="2">TP. Hồ Chí Minh</Option>
+                        <Option value="3">Ninh Bình</Option>
+                        <Option value="4" >Phú Thọ</Option>
+                      </Select>           
+                    </Form.Item>
+                    </Col>
 
-                    <Col md={24}>
+                    <Col span={6}>
+                    <Form.Item name={['user', 'end']} label="Thời hạn">
+                      <DatePicker defaultValue={moment('2015/01/01', dateFormat)}   format={dateFormat} />
+                    </Form.Item>
+                    </Col>
+
+                    <Col span={12}>
                     <Form.Item name={['warning', 'engineer']} label="Đối tượng liên quan">
                         <Select
                           mode="multiple"
@@ -153,7 +169,7 @@ const CreateWarning = () => {
                     </Form.Item>
                     </Col>
 
-                    <Col md={24}>
+                    <Col span={12}>
                     <Form.Item name={['warning', 'engineer']} label="Drone sử dụng">
                         <Select
                           mode="multiple"
@@ -165,7 +181,7 @@ const CreateWarning = () => {
                     </Form.Item>
                     </Col>
 
-                    <Col md={24}>
+                    <Col span={8}>
                     <Form.Item name={['warning', 'suppervisor']} label="Người giám sát" rules={[{ required: true }]}>
                       <Select defaultValue="1" >
                         <Option value="1">Nhóm VP.infinite></Option>                
@@ -177,7 +193,7 @@ const CreateWarning = () => {
                     </Col>
 
 
-                    <Col md={24}>
+                    <Col span={8}>
                     <Form.Item name={['warning', 'manager']} label="Người Quản lý" rules={[{ required: true }]}>
                       <Select defaultValue="1" >
                         <Option value="1">Nhóm VP.infinite></Option>                
@@ -188,7 +204,7 @@ const CreateWarning = () => {
                     </Form.Item>
                     </Col>
 
-                    <Col md={24}>
+                    <Col span={8}>
                     <Form.Item name={['warning', 'actor']} label="Nhóm thực hiện" rules={[{ required: true }]}>
                       <Select defaultValue="normal" >
                         <Option value="Critical">Nhóm VP.infinite></Option>                
@@ -205,11 +221,26 @@ const CreateWarning = () => {
               </Row>
               <Row>
                 <Divider className="subsec-title">Một số thông tin thêm</Divider> 
-                  <Col md={16} offset={4}>
+                  <Col span={16} offset={4}>
                   <Row gutter={24}>
 
+                    <Col span={6}>
+                    <Form.Item name={['warning', 'doc']} label="Tài liệu" wrapperCol={{ span: 18, offset:0}}>
+                      <Button>
+                        <UploadOutlined /> Click to Upload
+                      </Button>   
+                    </Form.Item>
+                    </Col>
 
-                    <Col md={24}>
+                    <Col span={6}>
+                    <Form.Item name={['warning', 'doc']} label="Ảnh" wrapperCol={{ span: 18, offset:0}}>
+                      <Button>
+                        <UploadOutlined /> Click to Upload
+                      </Button>   
+                    </Form.Item>
+                    </Col>
+
+                    <Col span={12}>
                     <Form.Item
                       name="coders"
                       label="Yêu cầu đặc biệt"
@@ -226,24 +257,16 @@ const CreateWarning = () => {
                     </Form.Item>
                     </Col>
 
-                    <Col md={24}>
+                    <Col span={24}>
                     <Form.Item name={['user', 'age']} label="Ghi chú" >
                          <TextArea rows={4} />
-                    </Form.Item>
-                    </Col>
-
-                    <Col md={16} offset={8}>
-                    <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}  name={['warning', 'doc']} label="Ảnh" wrapperCol={{ span: 18, offset:0}}>
-                      <Button>
-                        <UploadOutlined /> Click to Upload
-                      </Button>   
                     </Form.Item>
                     </Col>
 
                   </Row>
                 </Col>
               </Row>
-              <Form.Item wrapperCol={{ span: 16, offset: 4 }} className="confirm">
+              <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }} className="confirm">
                 <Button type="primary" htmlType="submit">Submit</Button>
                 <Button >Cancel</Button>
               </Form.Item>

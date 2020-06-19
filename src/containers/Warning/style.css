@@ -32,10 +32,11 @@ div.ant-form-item-control:nth-child(1) > div:nth-child(1) > div:nth-child(1) > b
 	height: 40px;
 	border-radius: 4px;
 }
+/*
 .ant-form-item-label{
 	text-align: left;
 }
-
+*/
 .confirm{
 	text-align: center;
 }
