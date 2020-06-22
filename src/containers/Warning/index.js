@@ -90,11 +90,6 @@ const CreateWarning = () => {
             <Sidebar />
           </Sider>
         <Layout style={{ padding: '0 24px 24px' }}>
-          <Breadcrumb style={{}}>
-              <Breadcrumb.Item>Home</Breadcrumb.Item>
-              <Breadcrumb.Item>Warning</Breadcrumb.Item>
-              <Breadcrumb.Item>Create Warning</Breadcrumb.Item>
-          </Breadcrumb>
         <Content className="form-body">
             <Row align={'middle'} className="SecName">
               <Col span={24}>
@@ -108,12 +103,12 @@ const CreateWarning = () => {
                   <Row gutter={24}>
 
                     <Col md={24}>
-                    <Form.Item name={['warning', 'name']} label="Tên công trình kiểm tra" rules={[{ required: true }]}>
+                    <Form.Item name={['warning', 'name']} label="Tên công trình" rules={[{ required: true }]}>
                       <Input />
                     </Form.Item>
                     </Col>
                     <Col md={24}>
-                    <Form.Item name={['user', 'age']} label="Phân loại" rules={[{ required: true }]}>
+                    <Form.Item name={['user1', 'age1']} label="Phân loại" rules={[{ required: true }]}>
                       <Select defaultValue="Maintenance" >
                         <Option value="Maintenance">Bảo trì</Option>
                         <Option value="Repair" >Sửa chữa</Option>
@@ -123,7 +118,7 @@ const CreateWarning = () => {
                     </Col>
                                         
                     <Col md={24} sm={24}>
-                    <Form.Item name={['user', 'age']} label="Mức độ" rules={[{ required: true }]}>
+                    <Form.Item name={['user2', 'age2']} label="Mức độ" rules={[{ required: true }]}>
                       <Select defaultValue="normal" >
                         <Option value="Critical">Khẩn cấp</Option>                
                         <Option value="high">Ưu tiên</Option>
@@ -133,23 +128,9 @@ const CreateWarning = () => {
                     </Form.Item>
                     </Col>
 
-
                     <Col md={24} sm={24}>
                     <Form.Item  name={['warning', 'address']} label="Địa chỉ" rules={[{ required: true }]}>
                       <Input />
-                    </Form.Item>
-                    </Col>
-
-
-                    <Col md={24}>
-                    <Form.Item name={['warning', 'engineer']} label="Đối tượng liên quan">
-                        <Select
-                          mode="multiple"
-                          style={{ width: '100%' }}
-                          placeholder="Please select"
-                        >
-                          {render_child}
-                        </Select>
                     </Form.Item>
                     </Col>
 
@@ -164,37 +145,36 @@ const CreateWarning = () => {
                         </Select>
                     </Form.Item>
                     </Col>
-
                     <Col md={24}>
-                    <Form.Item name={['warning', 'suppervisor']} label="Người giám sát" rules={[{ required: true }]}>
+                    <Form.Item name={['warning', 'suppervisor']} label="Giám sát viên" rules={[{ required: true }]}>
                       <Select defaultValue="1" >
-                        <Option value="1">Nhóm VP.infinite></Option>                
-                        <Option value="2">Nhóm The Boys</Option>
-                        <Option value="3">Nhóm The Ugly</Option>
-                        <Option value="4" >Nhóm mới</Option>
+                        <Option value="1">GS. Phạm Phong</Option>                
+                        <Option value="2">GS. Đỗ Huy</Option>
+                        <Option value="3">GS. Mạnh Kiên</Option>
+                        <Option value="4" >Thêm GS mới</Option>
                       </Select>   
                     </Form.Item>
                     </Col>
 
 
                     <Col md={24}>
-                    <Form.Item name={['warning', 'manager']} label="Người Quản lý" rules={[{ required: true }]}>
+                    <Form.Item name={['warning', 'manager']} label="Quản lý viên" rules={[{ required: true }]}>
                       <Select defaultValue="1" >
-                        <Option value="1">Nhóm VP.infinite></Option>                
-                        <Option value="2">Nhóm The Boys</Option>
-                        <Option value="3">Nhóm The Ugly</Option>
-                        <Option value="4" >Nhóm mới</Option>
+                        <Option value="1">QL. Nguyễn Văn A</Option>                
+                        <Option value="2">QL. Trần Trọng B</Option>
+                        <Option value="3">QL. Lê C</Option>
+                        <Option value="4" >Thêm QL mới</Option>
                       </Select>   
                     </Form.Item>
                     </Col>
 
                     <Col md={24}>
-                    <Form.Item name={['warning', 'actor']} label="Nhóm thực hiện" rules={[{ required: true }]}>
+                    <Form.Item name={['warning', 'actor']} label="Đội đảm nhận" rules={[{ required: true }]}>
                       <Select defaultValue="normal" >
-                        <Option value="Critical">Nhóm VP.infinite></Option>                
-                        <Option value="high">Nhóm The Boys</Option>
-                        <Option value="normal">Nhóm The Ugly</Option>
-                        <Option value="low" >Nhóm mới</Option>
+                        <Option value="Critical">Đội 1</Option>                
+                        <Option value="high">Đội 2</Option>
+                        <Option value="normal">Đội 3</Option>
+                        <Option value="low" >Đội mới</Option>
                       </Select> 
                     </Form.Item>
                     </Col>

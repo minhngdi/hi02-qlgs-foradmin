@@ -15,6 +15,8 @@ import WarningDetail from './containers/WarningDetail';
 import LoginPage from "./containers/LoginPage";
 import RegisterPage from "./containers/RegisterPage";
 import HomeA from "./containers/Home";
+import NotiSettings from "./containers/NotiSettings";
+import AlertSettings from "./containers/AlertSettings";
 
 const NotFound = () => <div>Not found</div>
 
@@ -36,7 +38,9 @@ class App1 extends React.Component {
               <Route path="/checklist" component={Inspection} />         
               <Route path="/login" component={LoginPage} />
               <Route path="/register" component={RegisterPage} />
-              <Route path="/home" component={HomeA} />              
+              <Route path="/home" component={HomeA} />
+              <Route path="/notisettings" component={NotiSettings} />
+              <Route path="/alertsettings" component={AlertSettings} />
               <Route component={NotFound} />
             </Switch>
         </div>

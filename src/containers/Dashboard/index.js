@@ -45,11 +45,6 @@ const Dashboard = (props) => {
                     <Sidebar />
                 </Sider>
                 <Layout style={{ padding: '0 24px 24px' }}>
-                    {/* <Breadcrumb style={{}}>
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item>Manage Monitoring</Breadcrumb.Item>
-                        <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
-                    </Breadcrumb> */}
                     <Content className="body-mod">
                         {/* Filter */}
                         {/*<p>Lọc theo dự án &nbsp; &nbsp;*/}
@@ -221,7 +216,7 @@ const Dashboard = (props) => {
                                 </Col>
                                 <Col span={6}>
                                     <Card title="Xem thêm">
-                                        <Card.Grid style={gridStyle}>Đi tới trang cảnh báo ></Card.Grid>
+                                        <Card.Grid style={gridStyle}>Đi tới trang cảnh báo </Card.Grid>
                                     </Card>
                                 </Col>
                             </Row>

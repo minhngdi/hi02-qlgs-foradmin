@@ -382,11 +382,6 @@ class Inspection extends React.Component {
                         <Sidebar />
                     </Sider>
                     <Layout style={{ padding: '0 24px 24px' }}>
-                        <Breadcrumb style={{}}>
-                            <Breadcrumb.Item>Home</Breadcrumb.Item>
-                            <Breadcrumb.Item>Manage Monitoring</Breadcrumb.Item>
-                            <Breadcrumb.Item>Inspection</Breadcrumb.Item>
-                        </Breadcrumb>
                         <Content className="body-mod">
                         {/* Filter */}
                         <p>Lọc theo trạng thái &nbsp; &nbsp;
